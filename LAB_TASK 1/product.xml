@@ -1,0 +1,57 @@
+
+<products>
+     <product id="11">
+	 <name>Samsung</name>
+	 <unit_price>35000</unit_price>
+	 <stock>50</stock>
+	 <status>1</status>
+	 </product>
+	 <product id="20">
+	 <name>HTC</name>
+	 <unit_price>65300</unit_price>
+	 <stock>35</stock>
+	 <status>0</status>
+	 </product>
+	 <product id="23">
+	 <name>Nokia</name>
+	 <unit_price>25100</unit_price>
+	 <stock>100</stock>
+	 <status>1</status>
+	 </product>
+	 </products>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<students>
+	<student id="11-11-1">
+		<name>Alamin</name>
+		<age>11</age>
+		<dept>CSE</dept>
+		<cgpa>4</cgpa>
+	</student>
+	<student id="12-33-4" >
+		<name>XYZ</name>
+		<age></age>
+		<dept>SE</dept>
+		<cgpa>3</cgpa>
+	</student>
+</students>

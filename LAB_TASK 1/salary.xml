@@ -1,0 +1,20 @@
+<information>
+     <info id="1">
+	 <name>John Doe</name>
+	 <address>H#38,R#3,Banani,Dhaka</address>
+	 <department>sales</department>
+	 <salary>20000</address>
+	 </info>
+	 <info id="2">
+	 <name>Mark Zukerberg</name>
+	 <address>Flat#A/1,H#20,R#18,Mirpur,Dhaka</address>
+	 <department>Accounts</department>
+	 <salary>12000</address>
+	 </info>
+	 <info id="3">
+	 <name> Ala Voski</name>
+	 <address>H#38,R#3,Motijheel,Dhaka</address>
+	 <department>Human Resourse</department>
+	 <salary>30000</address>
+	 </info>
+	 </information>
