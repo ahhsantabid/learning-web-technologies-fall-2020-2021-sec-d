@@ -51,14 +51,14 @@ if(isset($_POST['submit'])){
 
  if(empty($confirmpassword)){
     $error[]="empty password";
+}
 
+if($confirmpassword!=$password){
+    $error[]="password incorrect";
 }
-else if($confirmpassword!=$password)){
-    $error[]="incorrect password";
-}
+ 
  if(empty($gender)){
     $error[]="gender required";
-
 }
 if(empty($day )||empty($month)|| empty($year)){
     $error[]="Required Date of birth";
@@ -135,7 +135,21 @@ exit;
                                 <table cellpadding="4px">
                                     <tr>
                                         <td><label for="name1">Name</label></td>
-                                        <td>: <input type="text" name="name" id="name1" placeholder="Enter your name"></td>
+                                        <td>: <input type="text" name="name" id="name1" placeholder="Enter your name">
+                                        <span>
+                                        <?php
+                                                if(isset($error['name'])){
+                                                    echo $error['name'];
+                                                }
+
+
+
+
+
+
+                                           ?>
+                                        </span>
+                                        </td>
                                     </tr>
                                     
                                    
