@@ -1,4 +1,34 @@
+<?php
+
+/**
+ * @author ahhsan tabid
+ */
+session_start();
+
+if(isset($_POST['submit'])){
+
+  $name= isset($_POST['name'])? trim($_POST['name']):'';
+  $password= isset($_POST['password'])? trim($_POST['password']):'';
+
+
+
+
+}
+  ?>
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
+
 /**
  * @author ahhsan tabid
  */
