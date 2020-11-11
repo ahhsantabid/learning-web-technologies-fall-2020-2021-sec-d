@@ -135,7 +135,7 @@ exit;
                                     <tr>
                                         <td><label for="name1">Name</label></td>
                                         <td>: <input type="text" name="name" id="name1" placeholder="Enter your name" value="<?php if(isset($name)) echo $name ?>"> 
-                                        <span>
+                                        <span style="color:red;">
                                     <?php
                                      if(isset($error['name'])){
                                          echo $error['name'];
@@ -151,7 +151,7 @@ exit;
                                     
                                     
                                    
-                                    <tr>
+                                  <tr>
                                         <td><label for="username1">User Name</label> </td>
                                         <td>: <input type="text" name="username" id="username1" placeholder="Enter your username" value="<?php if(isset($username)) echo $username ?>">
                                         <span>
