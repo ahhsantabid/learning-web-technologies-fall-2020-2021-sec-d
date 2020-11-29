@@ -1,7 +1,11 @@
 <?php
 
-$con=mysqli_connect('localhost','root','','elearning');
+  require_once ('../database/db.php') ; ?>
 
+<?php
+
+ //$con = mysqli_connect('localhost','root','','elearning');
+ $con=getConnection();
 if(!$con){
     die("Not connected..". mysqli_error($con));
 }
@@ -20,6 +24,8 @@ $count=mysqli_num_rows($result);
 
 
 ?>
+
+
 
 
 
@@ -66,19 +72,24 @@ $count=mysqli_num_rows($result);
 						<th><font face="Arial" size="2">Duration</font></th>
                         <th><font face="Arial" size="2">Original price</font></th>
                         <th><font face="Arial" size="2">Selling price</font></th>
+                        <th><font face="Arial" size="2">Action</font></th>
+
                         
 					</tr>
                 </thead>
+
                 <?php
                 if($count>0){
-    while($row=mysqli_fetch_assoc($result)){ ?>
-        <tr bgcolor="#A7BFDE" colspan="2">
-						<th ><font face="Arial" size="2"><?php echo"{$row['id']}";?></font></th>
-						<th><font face="Arial" size="2"><?php echo"{$row['course_name']}";?></font></th>
-						<th><font face="Arial" size="2"><?php echo"{$row['author']}";?></font></th>
-						<th><font face="Arial" size="2"><?php echo"{$row['duration']}";?></font></th>
-                        <th><font face="Arial" size="2"><?php echo"{$row['original_price']}";?></font></th>
-                        <th><font face="Arial" size="2"><?php echo"{$row['selling_price']}";?></font></th>
+                while($row=mysqli_fetch_assoc($result)){ ?>
+                   <tr bgcolor="#A7BFDE" colspan="2">
+						<td ><font face="Arial" size="2"><?php echo"{$row['id']}";?></font></th>
+						<td><font face="Arial" size="2"><?php echo"{$row['course_name']}";?></font></th>
+						<td><font face="Arial" size="2"><?php echo"{$row['author']}";?></font></th>
+						<td><font face="Arial" size="2"><?php echo"{$row['duration']}";?></font></th>
+                        <td><font face="Arial" size="2"><?php echo"{$row['original_price']}";?></font></th>
+                        <td><font face="Arial" size="2"><?php echo"{$row['selling_price']}";?></font></th>
+                        <td><font face="Arial" size="2"><a href="">Edit</a><br><a href="deletecourse.php?id=<?php echo "{$row['id']}"; ?> ">Delete</a></font></td>
+
                         
 					</tr>
         

@@ -1,5 +1,5 @@
 <?php
-      require_once('../database/db.php');
+     require_once ('../database/db.php') ;
        
       if(isset($_POST['submit'])){
 
@@ -11,8 +11,8 @@
                $selling_price = $_POST['sellingprice'];
 
        if($id && $name && $author && $duration && $original_price && $selling_price){
-       $con =getConnection();
-
+       // $con = mysqli_connect('localhost','root','','elearning');
+      $con=getConnection();
      if(!$con){
    die("Not Connected". mysqli_error());
    }

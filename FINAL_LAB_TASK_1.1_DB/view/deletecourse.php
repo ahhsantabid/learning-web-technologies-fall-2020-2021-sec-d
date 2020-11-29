@@ -7,7 +7,7 @@ if(!$con){
 }
    $receive = $_REQUEST['id'];
 
-$sql= "DELETE FROM course WHERE id= $receive ";
+$sql= "DELETE FROM course WHERE id=  $receive  ";
 $result=mysqli_query($con,$sql);
 
 
