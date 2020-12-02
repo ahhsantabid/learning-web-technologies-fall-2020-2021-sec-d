@@ -5,7 +5,7 @@
 	function validate($user){
 			
 		$conn = getConnection();
-		$sql = "select * from users where username='{$user['username']}' and password='{$user['password']}'";
+		$sql = "select * from employee where username='{$user['username']}' and password='{$user['password']}'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 
@@ -21,7 +21,7 @@
 	function getById(){
 
 		$conn = getConnection();
-		$sql = "select * from users";
+		$sql = "select * from employee";
 		$result = mysqli_query($conn, $sql);
 
 		$user =[];
@@ -37,7 +37,7 @@
 	function getAllUsers(){
 
 		$conn = getConnection();
-		$sql = "select * from users";
+		$sql = "select * from employee";
 		$result = mysqli_query($conn, $sql);
 
 		$user =[];
@@ -54,7 +54,7 @@
 
 	function deleteUsers($id){
 		$conn = getConnection();
-		$sql = "delete from users where id=$id";
+		$sql = "delete from employee where id=$id";
 		$status = mysqli_query($conn, $sql);
 		if($status){
 			return true;
