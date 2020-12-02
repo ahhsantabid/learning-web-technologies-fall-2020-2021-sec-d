@@ -63,8 +63,28 @@
 		}
 	}
 
-	function updateUsers($user){
 
-	}
+
+		function updateUsers($id,$user){
+
+
+			$conn = getConnection();
+			$sql = "update  emoloyee set username = '{$user['username']}', password = '{$user['password']}',email ='{$user['email']}', type = '{$user['type']}' where id = $id";
+	
+			$status = mysqli_query($conn, $sql);
+	
+			if($status){
+	
+				return true;
+			}
+	
+			else{
+				
+				return false;
+			}
+	
+		}
+
+	
 
 ?>
