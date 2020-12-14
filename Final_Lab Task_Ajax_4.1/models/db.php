@@ -7,9 +7,9 @@ function getConnection($servername, $dbuser, $dbpass, $database){
     }
     
 
-function userValidate($id, $password){
+function validateUser($id, $password){
     
-    $sql = "select * from users where id = '$id' AND password = '$password'";
+    $sql = "select * from user where id = '$id' AND password = '$password'";
     
     $conn = getConnection('localhost', 'root', '', 'elearning');
     
@@ -42,10 +42,10 @@ function userValidate($id, $password){
     
 }
 
-function userRegistration($id, $name, $password, $email, $userType){
+function registrationUser($id, $name, $password, $email, $userType){
     
     $conn = getConnection('localhost', 'root', '', 'elearning');
-    $sql = "insert into users (id, name, password, email, user_type) values ('$id', '$name', '$password', '$email', '$usertype')";
+    $sql = "insert into user (id, name, password, email, user_type) values ('$id', '$name', '$password', '$email', '$usertype')";
     
     if(mysqli_query($conn, $sql)){
         
@@ -61,10 +61,10 @@ function userRegistration($id, $name, $password, $email, $userType){
     
 }
 
-function getUserInformation($username){
+function userInformation($username){
 
 		$conn = getConnection('localhost', 'root', '', 'elearning');
-		$sql = "select * from users";
+		$sql = "select * from user";
 		$result = mysqli_query($conn, $sql);
 
 		$userInfo =[];
@@ -79,7 +79,7 @@ function getUserInformation($username){
 function updatePassword($id, $password){
     
     $conn = getConnection('localhost', 'root', '', 'elearning');
-    $sql = "update users set password = '$password' where id = '$id'";
+    $sql = "update user set password = '$password' where id = '$id'";
     
     if(mysqli_query($conn, $sql)){
         
